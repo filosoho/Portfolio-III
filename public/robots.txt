@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://filosoho.space/sitemap-index.xml

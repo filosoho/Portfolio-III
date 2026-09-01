@@ -1,0 +1,242 @@
+<section class="skills" id="skills" aria-labelledby="skills-title">
+  <div class="skills__label">
+    <p class="eyebrow">Skills</p>
+    <span>03</span>
+  </div>
+
+  <div class="skills__content">
+    <div class="skills__intro">
+      <h2 id="skills-title">
+        Tools for building
+        <em> thoughtful systems.</em>
+      </h2>
+
+      <p>
+        A growing toolkit across frontend engineering, backend development,
+        cloud infrastructure, content systems and digital design.
+      </p>
+    </div>
+
+    <div class="skills__grid">
+      <!-- Frontend -->
+      <div class="skill-group">
+        <p class="skill-group__number">01</p>
+
+        <h3>Frontend</h3>
+
+        <ul>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>React</li>
+          <li>React Native</li>
+          <li>Vue.js</li>
+          <li>Vuex</li>
+          <li>Vuetify</li>
+          <li>Astro</li>
+          <li>Vite</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Sass</li>
+          <li>Tailwind CSS</li>
+          <li>Markdown</li>
+          <li>JSON</li>
+          <li>Responsive Design</li>
+          <li>Accessibility</li>
+          <li>Component Architecture</li>
+          <li>State Management</li>
+        </ul>
+      </div>
+
+      <!-- Backend & Data -->
+      <div class="skill-group">
+        <p class="skill-group__number">02</p>
+
+        <h3>Backend & Data</h3>
+
+        <ul>
+          <li>Python</li>
+          <li>Django</li>
+          <li>Node.js</li>
+          <li>Express.js</li>
+          <li>REST APIs</li>
+          <li>API Integration</li>
+          <li>PostgreSQL</li>
+          <li>MySQL</li>
+          <li>MongoDB</li>
+          <li>SQL</li>
+          <li>Database Design</li>
+        </ul>
+      </div>
+
+      <!-- Cloud, Tooling & Quality -->
+      <div class="skill-group">
+        <p class="skill-group__number">03</p>
+
+        <h3>Cloud, Tooling &amp; Quality</h3>
+
+        <ul>
+          <li>GCP</li>
+          <li>Cloud Run</li>
+          <li>Docker</li>
+          <li>Kubernetes</li>
+          <li>CI/CD</li>
+          <li>Git</li>
+          <li>npm</li>
+          <li>Bash</li>
+          <li>Linux</li>
+          <li>YAML</li>
+          <li>ESLint</li>
+          <li>Playwright</li>
+          <li>Jest</li>
+          <li>Supertest</li>
+          <li>Lighthouse</li>
+          <li>Debugging</li>
+        </ul>
+      </div>
+
+      <!-- Design & Creative -->
+      <div class="skill-group">
+        <p class="skill-group__number">04</p>
+
+        <h3>Design & Creative</h3>
+
+        <ul>
+          <li>Figma</li>
+          <li>Adobe Creative Suite</li>
+          <li>Procreate</li>
+          <li>UI/UX</li>
+          <li>Design Systems</li>
+          <li>Digital Illustration</li>
+          <li>Animation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .skills {
+    border-top: 1px solid var(--border);
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 140px minmax(0, 1fr);
+    padding: 8rem 0 10rem;
+  }
+
+  .skills__label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 8rem;
+  }
+
+  .skills__label span {
+    color: var(--muted);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+  }
+
+  .skills__content {
+    max-width: 1100px;
+  }
+
+  .skills__intro {
+    align-items: end;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    padding-bottom: 5rem;
+  }
+
+  .skills__intro > p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .skills__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .skill-group {
+    border-bottom: 1px solid var(--border);
+    min-height: 250px;
+    padding: 3rem 3rem 3rem 0;
+    position: relative;
+  }
+
+  .skill-group:nth-child(odd) {
+    border-right: 1px solid var(--border);
+    padding-right: 4rem;
+  }
+
+  .skill-group:nth-child(even) {
+    padding-left: 4rem;
+  }
+
+  .skill-group__number {
+    color: var(--muted);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    margin: 0 0 2rem;
+  }
+
+  .skill-group h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0 0 1.5rem;
+  }
+
+  .skill-group ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  .skill-group li {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .skill-group li:not(:last-child)::after {
+    color: var(--border);
+    content: "·";
+    margin-left: 1rem;
+  }
+
+  @media (max-width: 800px) {
+    .skills {
+      gap: 2rem;
+      grid-template-columns: 1fr;
+      padding: 7rem 0 8rem;
+    }
+
+    .skills__label {
+      align-items: center;
+      flex-direction: row;
+      min-height: auto;
+    }
+
+    .skills__intro {
+      gap: 2rem;
+      grid-template-columns: 1fr;
+      padding-bottom: 3rem;
+    }
+
+    .skills__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .skill-group,
+    .skill-group:nth-child(odd),
+    .skill-group:nth-child(even) {
+      border-right: 0;
+      padding: 2.5rem 0;
+    }
+  }
+</style>

@@ -1,0 +1,177 @@
+---
+import { otherProjects } from "../data/projects";
+---
+
+<section class="other-work" id="other-work">
+  <div class="other-work__heading">
+    <p class="eyebrow">Other work</p>
+
+    <p class="other-work__intro">
+      Earlier projects, experiments and collaborative work.
+    </p>
+  </div>
+
+  <div class="other-work__list">
+    {
+      otherProjects.map((project, index) => (
+        <article class="other-work__item">
+          <span class="section-number">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+
+          <div class="other-work__title">
+            {
+              project.links?.length ? (
+                <h3>{project.title}</h3>
+                <div class="other-work__links">
+                  {project.links.map((link) => (
+                    <a
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {link.label}
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  ))}
+                </div>
+              ) : project.url ? (
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <h3>{project.title}</h3>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              ) : null
+            }
+          </div>
+
+          <span class="other-work__type">
+            {project.type}
+          </span>
+
+          <span class="other-work__technologies">
+            {project.technologies}
+          </span>
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .other-work {
+    border-top: 1px solid var(--border);
+    margin-top: 7rem;
+    padding-top: 2.5rem;
+  }
+
+  .other-work__heading {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 140px minmax(0, 1fr);
+    margin-bottom: 2rem;
+  }
+
+  .other-work__intro {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 460px;
+  }
+
+  .other-work__list {
+    border-top: 1px solid var(--border);
+  }
+
+  .other-work__item {
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 60px minmax(180px, 1.2fr) minmax(150px, 0.8fr) minmax(180px, 1fr);
+    padding: 1.4rem 0;
+  }
+
+  .other-work__title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .other-work__title h3,
+  .other-work__title a {
+    color: var(--foreground);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .other-work__title a {
+    align-items: center;
+    display: inline-flex;
+    gap: 0.5rem;
+  }
+
+  .other-work__title a span {
+    font-size: 0.9rem;
+    transition: transform 200ms ease;
+  }
+
+  .other-work__title a:hover span {
+    transform: translate(0.15rem, -0.15rem);
+  }
+
+  .other-work__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .other-work__links a {
+    align-items: center;
+    color: var(--muted);
+    display: inline-flex;
+    gap: 0.3rem;
+    font-size: 0.7rem;
+    text-decoration: none;
+  }
+
+  .other-work__links a:hover {
+    color: var(--foreground);
+  }
+
+  .other-work__links a span {
+    font-size: 0.8rem;
+  }
+
+  .other-work__type,
+  .other-work__technologies {
+    color: var(--muted);
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 800px) {
+    .other-work {
+      margin-top: 5rem;
+    }
+
+    .other-work__heading {
+      gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+
+    .other-work__item {
+      gap: 1rem;
+      grid-template-columns: 40px 1fr;
+    }
+
+    .other-work__type,
+    .other-work__technologies {
+      grid-column: 2;
+    }
+  }
+</style>

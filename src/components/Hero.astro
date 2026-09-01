@@ -1,0 +1,158 @@
+<section class="hero">
+  <div class="hero__meta">
+    <p>Software Engineer</p>
+    <p>London, UK</p>
+  </div>
+
+  <div class="hero__main">
+    <h1>ANNA BEDIA</h1>
+    <div class="hero__statement-container">
+      <img src="../src/images/portrait.png" alt="Portrait of Anna Bedia" />
+
+      <div class="hero__statement">
+        <h2 id="hero-title">
+          Systems, product and UX thinking.
+        </h2>
+
+        <p class="hero__description">
+          Software engineer with a background in digital design,
+          building thoughtful, reliable and user-focused software.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__footer">
+    <span>Scroll to explore</span>
+    <span aria-hidden="true">↓</span>
+  </div>
+</section>
+
+<style>
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh - 5rem);
+    padding: 4rem 0 3rem;
+  }
+
+  .hero__meta {
+    display: flex;
+    font-size: 0.75rem;
+    justify-content: space-between;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .hero__main {
+    align-items: end;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    & h1 {
+      padding-bottom: 5rem;
+    }
+  }
+
+  .hero__main img {
+    align-self: center;
+    justify-self: center;
+  }
+
+  .hero__statement-container {
+    align-items: flex-end;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .hero__statement-container img {
+    display: block;
+    max-width: 450px;
+    width: 100% ;
+  }
+
+  .hero__statement {
+    padding-bottom: 5rem;
+  }
+
+  .hero__statement h2 {
+    font-size: clamp(1.5rem, 3vw, 2.75rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    margin: 0 0 2rem;
+  }
+
+  .hero__description {
+    line-height: 1.6;
+    max-width: 25rem;
+  }
+
+  .hero__footer {
+    border-top: 1px solid currentColor;
+    display: flex;
+    font-size: 0.75rem;
+    justify-content: space-between;
+    letter-spacing: 0.08em;
+    padding-top: 2rem;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 1200px) {
+    .hero {
+      min-height: calc(100vh - 5rem);
+      padding: 0;
+    }
+
+    .hero__main {
+      grid-template-columns: 1fr;
+
+      & h1 {
+        padding-bottom: unset;
+        text-align: center;
+      }
+    }
+
+    .hero__shapes {
+      display: none;
+    }
+
+    .hero__statement-container {
+      grid-template-columns: 65fr 35fr;
+      margin: 5% 10%;
+    }
+
+    .hero__statement {
+      padding-bottom: 2rem;
+    }
+  }
+
+  @media (max-width: 840px) {
+    .hero__statement-container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .hero {
+      min-height: calc(100svh - 4rem);
+    }
+
+    .hero__main {
+      gap: 3rem;
+      grid-template-columns: 1fr;
+    }
+
+    h1 {
+      font-size: clamp(5rem, 25vw, 9rem);
+    }
+
+    .hero__statement {
+      max-width: 30rem;
+    }
+  }
+</style>

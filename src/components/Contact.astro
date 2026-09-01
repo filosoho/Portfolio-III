@@ -1,0 +1,185 @@
+<section class="contact" id="contact">
+  <div class="contact__label">
+    <p class="eyebrow">Contact</p>
+    <span>04</span>
+  </div>
+
+  <div class="contact__content">
+    <div class="contact__heading">
+      <h2>
+        Interested in thoughtful
+        <em> digital work?</em>
+      </h2>
+
+      <a
+        href="mailto:filosoho@gmail.com"
+        class="contact__arrow"
+        aria-label="Send Anna an email"
+        >
+        ↗
+    </a>
+    </div>
+
+    <div class="contact__bottom">
+      <p>
+        I'm always interested in conversations around software,
+        product, design and creative technology.
+      </p>
+
+      <div class="contact__links">
+        <a href="mailto:filosoho@gmail.com">Email</a>
+
+        <a
+          href="https://www.linkedin.com/in/filosoho/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://github.com/filosoho"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact {
+    border-top: 1px solid var(--border);
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 140px minmax(0, 1fr);
+    padding: 9rem 0 4rem;
+  }
+
+  .contact__label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 10rem;
+  }
+
+  .contact__label span {
+    color: var(--muted);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+  }
+
+  .contact__content {
+    max-width: 1100px;
+  }
+
+  .contact__heading {
+    align-items: flex-end;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    padding-bottom: 5rem;
+  }
+
+  .contact__arrow {
+    color: var(--muted);
+    display: block;
+    flex-shrink: 0;
+    font-size: clamp(3rem, 6vw, 6rem);
+    line-height: 1;
+    text-decoration: none;
+    transition:
+      transform 300ms ease,
+      color 300ms ease;
+  }
+
+  .contact__arrow:hover {
+    color: var(--foreground);
+    transform: translate(0.3rem, -0.3rem);
+  }
+
+  .contact__heading:hover .contact__arrow {
+    color: var(--foreground);
+    transform: translate(0.3rem, -0.3rem);
+  }
+
+  .contact__bottom {
+    align-items: end;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding-top: 3rem;
+  }
+
+  .contact__bottom > p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 420px;
+  }
+
+  .contact__links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .contact__links a {
+    color: var(--foreground);
+    font-size: 0.9rem;
+    position: relative;
+    text-decoration: none;
+  }
+
+  .contact__links a::after {
+    background: currentColor;
+    bottom: -0.35rem;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease;
+  }
+
+  .contact__links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  @media (max-width: 800px) {
+    .contact {
+      gap: 2rem;
+      grid-template-columns: 1fr;
+      padding: 7rem 0 3rem;
+    }
+
+    .contact__label {
+      align-items: center;
+      flex-direction: row;
+      min-height: auto;
+    }
+
+    .contact__heading {
+      padding-bottom: 3rem;
+    }
+
+    .contact__arrow {
+      display: none;
+    }
+
+    .contact__bottom {
+      gap: 2.5rem;
+      grid-template-columns: 1fr;
+    }
+
+    .contact__links {
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+  }
+</style>

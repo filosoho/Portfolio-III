@@ -1,0 +1,85 @@
+# Anna Bedia — Software Engineer
+
+> Portfolio of Anna Bedia, a Software Engineer working across software engineering, systems, product and UX.
+
+## About
+
+Anna Bedia is a Software Engineer with a background in digital design, digital illustration, animation and creative technology.
+
+Her work combines software engineering with product and UX thinking, with a growing focus on backend systems, architecture, cloud infrastructure and the technologies underneath the interface.
+
+## Selected Work
+
+### Android Developer Documentation
+
+Project for Google. Developer documentation platform work for developer.android.com.
+
+Anna works across reusable documentation components, homepage merchandising, content tooling and cloud-to-monorepo publishing workflows.
+
+Technologies include Astro, TypeScript, JavaScript, React, Web Components, Node.js, Strapi, GCP, Cloud Run, YAML, Sass and npm.
+
+Project website: https://developer.android.com/
+
+### Internal Project Tracking Tool
+
+Project for Google. Enterprise platform work involving project management, data-driven workflows and operational visibility.
+
+Anna contributed across frontend development, application behaviour, state management and backend-integrated workflows.
+
+Technologies include Vue.js, Vuex, Vuetify, Django, Python, MySQL and Cypress.
+
+### Google Ads Rewards
+
+Project for Google. Customer-facing product work focused on responsive, accessible and reusable interfaces.
+
+Anna contributed to frontend development within a Django and Python application and an enterprise CMS.
+
+Project website: https://adsrewards.withgoogle.com/
+
+Technologies include Django, Python, JavaScript, HTML, CSS, accessibility, responsive design, UI components and Playwright.
+
+### NC News
+
+Independent full-stack software engineering project.
+
+A news application built with React, Node.js, Express.js and PostgreSQL. The application supports article browsing, topic filtering, voting, commenting and user interactions.
+
+Technologies include React, React Router, Context API, Axios, Node.js, Express.js, REST APIs, PostgreSQL, SQL, Jest and Supertest.
+
+## Other Projects
+
+- Flight App — Cloud-native / DevOps project
+- RetroByteLab — Django e-commerce application
+- Autumn Chick Shopping App — UI/UX prototype
+- Linux Totoro Pomodoro Timer — Desktop application
+- Busk-A-Move — Collaborative React application
+- CityBite Burgers — Frontend application
+
+## Portfolio Evolution
+
+### Portfolio III — 2026
+
+A focused portfolio built around software engineering, systems, product and UX thinking.
+
+Technologies: Astro, TypeScript, CSS.
+
+### Portfolio II — 2025–2026
+
+An interactive portfolio exploring creative web development, 3D experiences and visual experimentation.
+
+Technologies: React, Three.js, React Three Fiber, GSAP, Tailwind CSS and Vite.
+
+Website: https://filosoho.space/
+
+### Portfolio I — 2024–2025
+
+A creative portfolio bringing together digital illustration, animation and early software projects.
+
+Technologies: HTML, JavaScript and CSS.
+
+## Author
+
+Anna Bedia  
+Software Engineer  
+Website: https://filosoho.space/  
+GitHub: https://github.com/filosoho

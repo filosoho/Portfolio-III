@@ -1,0 +1,90 @@
+<section class="about" id="about" aria-labelledby="about-title">
+  <div class="about__label">
+    <p class="eyebrow">About</p>
+    <span>02</span>
+  </div>
+
+  <div class="about__content">
+    <h2 id="about-title">
+      Software engineering shaped by 
+      <em> design, systems and people.</em>
+    </h2>
+
+    <div class="about__body">
+      <p>
+        I work at the intersection of software engineering, product and UX thinking.
+        My background in digital design and creative technology influences
+        how I approach engineering - from the way systems are structured
+        to the way people experience the final product.
+      </p>
+
+      <p>
+        I focus on software engineering while continuing to deepen my
+        understanding of backend systems, architecture and the
+        technologies underneath the interface.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    border-top: 1px solid var(--border);
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 140px minmax(0, 1fr);
+    padding: 10rem 0 12rem;
+  }
+
+  .about__label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 12rem;
+  }
+
+  .about__label span {
+    color: var(--muted);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+  }
+
+  .about__content {
+    max-width: 920px;
+  }
+
+  .about__body {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 6rem;
+    max-width: 760px;
+  }
+
+  .about__body p {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 800px) {
+    .about {
+      gap: 2rem;
+      grid-template-columns: 1fr;
+      padding: 7rem 0 8rem;
+    }
+
+    .about__label {
+      align-items: center;
+      flex-direction: row;
+      min-height: auto;
+    }
+
+    .about__body {
+      gap: 2rem;
+      grid-template-columns: 1fr;
+      margin-left: 0;
+      margin-top: 4rem;
+    }
+  }
+</style>

@@ -1,0 +1,56 @@
+---
+import { projects } from "../data/projects";
+
+const siteUrl = "https://filosoho.space";
+
+const person = {
+  "@type": "Person",
+  "@id": `${siteUrl}/#person`,
+  name: "Anna Bedia",
+  url: siteUrl,
+  jobTitle: "Software Engineer",
+  description:
+    "Software Engineer with a background in digital design, working across software engineering, systems, product and UX.",
+  sameAs: [
+    "https://github.com/filosoho",
+  ],
+};
+
+const website = {
+  "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
+  url: siteUrl,
+  name: "Anna Bedia — Software Engineer",
+  description:
+    "Portfolio of Anna Bedia, a Software Engineer working across software engineering, systems, product and UX.",
+  author: {
+    "@id": `${siteUrl}/#person`,
+  },
+};
+
+const projectData = projects.map((project) => ({
+  "@type": "CreativeWork",
+  "@id": `${siteUrl}/#project-${project.slug}`,
+  name: project.title,
+  description: project.description,
+  creator: {
+    "@id": `${siteUrl}/#person`,
+  },
+  keywords: project.technologies,
+  ...(project.url && { url: project.url, }),
+}));
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    person,
+    website,
+    ...projectData,
+  ],
+};
+---
+
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(structuredData)}
+></script>

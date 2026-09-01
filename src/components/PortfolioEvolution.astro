@@ -1,0 +1,208 @@
+---
+import { portfolioHistory } from "../data/projects";
+
+---
+
+<section class="portfolio-evolution" id="evolution">
+  <hr />
+  <div class="portfolio-evolution__heading">
+    <p class="eyebrow">Portfolio Evolution</p>
+
+    <p class="portfolio-evolution__intro intro">
+      These portfolios document how my work has evolved -
+      from digital art and interactive experiences toward
+      systems, product and engineering.
+    </p>
+  </div>
+
+  <div class="portfolio-evolution__timeline">
+
+    {
+      portfolioHistory.map((item) => (
+        <article class="portfolio-evolution__item">
+
+          <div class="portfolio-evolution__number">
+            {item.number}
+          </div>
+
+          <div class="portfolio-evolution__content">
+
+            <div class="portfolio-evolution__container">
+              <h3>{item.title}</h3>
+              <span>{item.period}</span>
+            </div>
+
+            <p>
+              {item.description}
+            </p>
+
+            {
+              item.technologies && (
+                <p class="portfolio-evolution__technologies">
+                  {item.technologies}
+                </p>
+              )
+            }
+
+            {
+              item.url ? (
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="portfolio-evolution__link"
+                >
+                  Visit portfolio
+                  <span aria-hidden="true">↗</span>
+                </a>
+              ) : (
+                <span class="portfolio-evolution__current">
+                  You are here
+                </span>
+              )
+            }
+
+          </div>
+
+        </article>
+      ))
+    }
+
+  </div>
+
+</section>
+
+<style>
+  .portfolio-evolution {
+    padding: 7rem 0;
+    
+    hr {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .portfolio-evolution__heading {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 140px minmax(0, 1fr);
+    margin-bottom: 2rem;
+  }
+
+  .portfolio-evolution__timeline {
+    border-top: 1px solid var(--border);
+  }
+
+  .portfolio-evolution__item {
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 10% 90%;
+    padding: 3rem 0;
+  }
+
+  .portfolio-evolution__number {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+  }
+
+  .portfolio-evolution__content {
+    max-width: 850px;
+  }
+
+  .portfolio-evolution__container {
+    align-items: baseline;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .portfolio-evolution__container h3 {
+    font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+    font-weight: 400;
+    letter-spacing: -0.025em;
+  }
+
+  .portfolio-evolution__container span {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    white-space: nowrap;
+  }
+
+  .portfolio-evolution__content > p {
+    line-height: 1.6;
+    max-width: 650px;
+  }
+
+  .portfolio-evolution__technologies {
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+    margin-top: 1.25rem;
+    opacity: 0.65;
+  }
+
+  .portfolio-evolution__link {
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    color: inherit;
+    display: inline-flex;
+    font-size: .85rem;
+    gap: .5rem;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    transition: gap .2s, border-color .2s;
+  }
+
+  .portfolio-evolution__link span {
+    transition: transform 0.2s ease;
+  }
+
+  .portfolio-evolution__link:hover span {
+    transform: translate(3px, -3px);
+  }
+
+  .portfolio-evolution__current {
+    display: inline-flex;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 800px) {
+    .portfolio-evolution {
+      padding: 7rem 0;
+    }
+
+    .portfolio-evolution__heading {
+      gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+
+    .portfolio-evolution__intro {
+      grid-column: auto;
+      margin-top: 0;
+    }
+
+    .portfolio-evolution__item {
+      gap: 1rem;
+      grid-template-columns: 3rem 1fr;
+      padding: 2.5rem 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .portfolio-evolution {
+      padding: 5rem 0;
+    }
+
+    .portfolio-evolution__container {
+      display: block;
+    }
+
+    .portfolio-evolution__container span {
+      display: block;
+      margin-top: 0.5rem;
+    }
+  }
+</style>

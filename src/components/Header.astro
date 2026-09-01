@@ -1,0 +1,66 @@
+<header class="site-header">
+  <a
+    href="https://github.com/filosoho"
+    class="site-name" target="_blank"
+    rel="noopener noreferrer"
+    >
+      <img
+        src="../src/images/logo.png"
+        class="site-header__logo"
+        alt="Filosoho logo"
+        aria-hidden="true"
+      />
+  </a>
+
+  <nav aria-label="Main navigation">
+    <a href="#selected-work">Selected Work</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+  }
+
+  .site-header__logo {
+    height: 3rem;
+    width: auto;
+  }
+  
+  .site-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+  }
+
+  @media (max-width: 600px) {
+    .site-header {
+      align-items: flex-start;
+    }
+
+    nav {
+      gap: 0.8rem;
+    }
+  }
+</style>
