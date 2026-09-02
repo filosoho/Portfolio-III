@@ -388,7 +388,7 @@ export const portfolioHistory: PortfolioHistoryItem[] = [
     period: "2025-2026",
     technologies:
       "React · Three.js · React Three Fiber · GSAP · Tailwind CSS · Vite",
-    url: "https://filosoho.space/",
+    url: "https://filosoho-space.netlify.app",
   },
   {
     number: "01",
