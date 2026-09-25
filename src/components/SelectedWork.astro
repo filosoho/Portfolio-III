@@ -43,41 +43,9 @@ import PortfolioEvolution from "./PortfolioEvolution.astro";
               <span>{project.client}</span>
               <span>{project.type}</span>
             </span>
-          </span>
-
-          <span class="project-date">
-            {project.dates}
-          </span>
-
-          <span class="project-toggle" aria-hidden="true">
-            <span class="plus">+</span>
-            <span class="minus">−</span>
-          </span>
-        </summary>
-
-        <article class="project-details">
-          <div class="project-introduction">
-            <div class="detail-label">
-              <p class="eyebrow">Overview</p>
-            </div>
-
-            <div class="project-description">
-              <p class="lead">
-                {project.description}
-              </p>
-
-              <div class="project-role">
-                <p class="eyebrow">Role</p>
-
-                <p>
-                  {project.role}
-                </p>
-              </div>
               {
                 (project.url || project.links?.length) && (
                   <div class="project-link">
-                    <p class="eyebrow">Project</p>
-
                     {project.links?.length ? (
                       <div class="project-links">
                         {project.links.map((link) => (
@@ -108,6 +76,36 @@ import PortfolioEvolution from "./PortfolioEvolution.astro";
                   </div>
                 )
               }
+          </span>
+
+          <span class="project-date">
+            {project.dates}
+          </span>
+
+          <span class="project-toggle" aria-hidden="true">
+            <span class="plus">+</span>
+            <span class="minus">−</span>
+          </span>
+        </summary>
+
+        <article class="project-details">
+          <div class="project-introduction">
+            <div class="detail-label">
+              <p class="eyebrow">Overview</p>
+            </div>
+
+            <div class="project-description">
+              <p class="lead">
+                {project.description}
+              </p>
+
+              <div class="project-role">
+                <p class="eyebrow">Role</p>
+
+                <p>
+                  {project.role}
+                </p>
+              </div>
             </div>
           </div>
 
@@ -348,7 +346,7 @@ import PortfolioEvolution from "./PortfolioEvolution.astro";
   }
 
   .project-link {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 
   .project-link .eyebrow {
